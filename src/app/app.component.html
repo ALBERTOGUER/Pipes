@@ -1,0 +1,146 @@
+<div class="container">
+  <br>
+  <h1>Pipes</h1>
+  <br>
+
+  <table class="table">
+
+    <thead class="thead-inverse">
+      <tr>
+        <th>Variable</th>
+        <th>Pipe</th>
+        <th>Productos</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>{{Nombre}}</td>
+        <td>uppercase</td>
+        <td>{{Nombre|uppercase}}</td>
+
+
+      </tr>
+      <tr>
+        <td>{{Nombre}}</td>
+        <td>lowercase</td>
+        <td>{{Nombre|lowercase}}</td>
+
+
+      </tr>
+      <tr>
+        <td>{{Nombre}}</td>
+        <td>slice:3</td>
+        <td>{{Nombre|slice:3}}</td>
+
+
+      </tr>
+      <tr>
+        <td>{{Nombre}}</td>
+        <td>slice:3 </td>
+        <td>{{Nombre|slice: 0 : 3 }}</td>
+
+
+      </tr>
+      <tr>
+        <td>{{Nombre}}</td>
+        <td>slice: 0 : 3</td>
+        <td>{{Nombre|slice: 0 : 3 }}</td>
+
+
+      </tr>
+      <tr>
+        <td>{{array}}</td>
+        <td>slice 0 : 3</td>
+        <td>{{array|slice: 0 : 3 }}</td>
+
+
+      </tr>
+      <tr>
+        <td>{{pi}}</td>
+        <td>number</td>
+        <td>{{pi|number: '3.0-10' }}</td>
+
+      </tr>
+      <tr>
+        <td>{{porcentaje}}</td>
+        <td>percent</td>
+        <td>{{porcentaje|percent }}</td>
+
+      </tr>
+      <tr>
+        <td>{{porcentaje}}</td>
+        <td>percent</td>
+        <td>{{porcentaje|percent: '2.2-2'}}</td>
+
+      </tr>
+      <tr>
+        <td>{{salario}}</td>
+        <td>currency</td>
+        <td>{{salario|currency}}</td>
+
+      </tr>
+      <tr>
+        <td>{{salario}}</td>
+        <td>currency</td>
+        <td>{{salario|currency:'JPY'}}</td>
+
+      </tr>
+      <tr>
+        <td>{{fecha}}</td>
+        <td>date</td>
+        <td>{{fecha|date}}</td>
+
+      </tr>
+      <tr>
+        <td>{{fecha}}</td>
+        <td>date</td>
+        <td>{{fecha|date:'medium'}}</td>
+
+      </tr>
+      <tr>
+        <td>{{fecha}}</td>
+        <td>date</td>
+        <td>{{fecha|date:'longDate'}}</td>
+
+      </tr>
+      <tr>
+        <td>{{fecha}}</td>
+        <td>date</td>
+        <td>{{fecha|date:'short'}}</td>
+
+      </tr>
+      <tr>
+        <td>{{fecha}}</td>
+        <td>date</td>
+        <td>{{fecha|date:'dd-MMMM-yyyy'}}</td>
+
+      </tr>
+
+      <tr>
+        <td>{{pesona}}</td>
+        <td>json</td>
+        <td>{{persona|json}}</td>
+
+      </tr>
+      <tr>
+        <td>{{nombre2}}</td>
+        <td>capitalizado</td>
+        <td>{{nombre2|capitalizado}}</td>
+
+      </tr>
+
+      <tr>
+        <td>{{Nombre}}</td>
+        <td>contraseña:{{activar}}</td><br>
+        <button (click)="activar = !activar" type="button" class="">Activar/ Desactivar</button>
+        <td>{{Nombre|contrasena: activar}}</td>
+
+      </tr>
+
+    </tbody>
+  </table>
+
+  <h4>youTube <small>videos</small></h4>
+  <iframe width="560" height="315" [src]="video | sanitizer: 'https://www.youtube.com/embed/'" allowfullscreen frameborder="0"></iframe>
+</div>
